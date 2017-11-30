@@ -4,12 +4,11 @@ import './App.css';
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    NavLink
 } from 'react-router-dom'
 
 import AboutPage from './components/AboutPage'
 import HomePage from './components/HomePage';
-
 
 class App extends Component {
     render() {
@@ -20,15 +19,15 @@ class App extends Component {
                         <img src={logo} className="App-logo" alt="logo"/>
                         <nav className="App-nav">
                             <ul className="App-nav-list">
-                                <li><Link to="/" className="App-nav-item">Home</Link></li>
-                                <li><Link to="/about" className="App-nav-item">About</Link></li>
+                                <li><NavLink to="/home" className="App-nav-item" activeClassName="active-header-nav">Home</NavLink></li>
+                                <li><NavLink to="/about" className="App-nav-item" activeClassName="active-header-nav">About</NavLink></li>
                             </ul>
                         </nav>
                     </header>
                     <div className="Main">
                         <div>
-                            <Route exact path="/" component={HomePage}/>
-                            <Route path="/about" component={AboutPage}/>
+                            <Route exact path="/home" component={HomePage}/>
+                            <Route exact path="/about" component={AboutPage}/>
                         </div>
                     </div>
                 </div>

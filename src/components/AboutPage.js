@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 const AboutPage = () => {
     return (
@@ -6,7 +6,6 @@ const AboutPage = () => {
             <p>About page</p>
         </div>
     );
-
-}
+};
 
 export default AboutPage;
